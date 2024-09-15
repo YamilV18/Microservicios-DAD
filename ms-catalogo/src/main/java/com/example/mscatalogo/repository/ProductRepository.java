@@ -1,6 +1,6 @@
-package com.example.msproducto.repository;
+package com.example.mscatalogo.repository;
 
-import com.example.msproducto.entity.Product;
+import com.example.mscatalogo.entity.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

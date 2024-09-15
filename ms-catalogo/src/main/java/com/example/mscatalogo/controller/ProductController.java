@@ -1,7 +1,7 @@
-package com.example.msproducto.controller;
+package com.example.mscatalogo.controller;
 
-import com.example.msproducto.entity.Product;
-import com.example.msproducto.service.ProductService;
+import com.example.mscatalogo.entity.Product;
+import com.example.mscatalogo.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

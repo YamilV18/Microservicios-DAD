@@ -1,8 +1,8 @@
-package com.example.msproducto.service.impl;
+package com.example.mscatalogo.service.impl;
 
-import com.example.msproducto.entity.Product;
-import com.example.msproducto.repository.ProductRepository;
-import com.example.msproducto.service.ProductService;
+import com.example.mscatalogo.entity.Product;
+import com.example.mscatalogo.repository.ProductRepository;
+import com.example.mscatalogo.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
