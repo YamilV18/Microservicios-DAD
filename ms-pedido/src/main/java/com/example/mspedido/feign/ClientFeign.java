@@ -13,7 +13,7 @@ import java.util.Optional;
 public interface ClientFeign {
     @GetMapping("/{id}")
     @CircuitBreaker(name = "clientListByIdCB", fallbackMethod = "clientListById")
-    public ResponseEntity<Optional<Client>> getById(@PathVariable Integer id);
+    public ResponseEntity<Client> getById(@PathVariable Integer id);
     default ResponseEntity<Client> clientListById(Integer id, Exception e) {
         return ResponseEntity.ok(new Client());
     }
