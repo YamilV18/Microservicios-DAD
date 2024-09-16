@@ -8,6 +8,7 @@ import com.example.mspedido.feign.ClientFeign;
 import com.example.mspedido.feign.ProductFeign;
 import com.example.mspedido.repository.OrderRepository;
 import com.example.mspedido.service.OrderService;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -59,6 +60,7 @@ public class OrderServiceImpl implements OrderService {
 
 
     @Override
+    @CircuitBreaker(name = "clientListByIdCB", fallbackMethod = "clientListById")
     public Optional<Order> findById(Integer id) {
         Optional<Order> orderOpt = orderRepository.findById(id);
         if (orderOpt.isPresent()) {
