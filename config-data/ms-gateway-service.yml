@@ -27,10 +27,14 @@ spring:
         locator:
           enable: true
       routes:
-        - id: ms-catalogo-service
+        - id: ms-catalogo-service-category
           uri: lb://ms-catalogo-service
           predicates:
             - Path=/category/**
+        - id: ms-catalogo-service-product
+          uri: lb://ms-catalogo-service
+          predicates:
+            - Path=/product/**
         - id: ms-cliente-service
           uri: lb://ms-cliente-service
           predicates:
