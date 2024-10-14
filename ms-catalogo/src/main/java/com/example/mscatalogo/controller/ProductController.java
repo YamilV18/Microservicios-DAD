@@ -23,7 +23,7 @@ public class ProductController {
         return  ResponseEntity.ok(productService.findById(id));
     }
     @PostMapping
-    public ResponseEntity<Product> create(Product product) {
+    public ResponseEntity<Product> create(@RequestBody Product product) {
         return  ResponseEntity.ok(productService.save(product));
     }
     @PutMapping("/{id}")
