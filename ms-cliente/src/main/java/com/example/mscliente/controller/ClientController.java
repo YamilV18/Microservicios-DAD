@@ -23,7 +23,7 @@ public class ClientController {
         return ResponseEntity.ok(clientService.findById(id));
     }
     @PostMapping
-    public ResponseEntity<Client> create(Client client) {
+    public ResponseEntity<Client> create(@RequestBody Client client) {
         return ResponseEntity.ok(clientService.save(client));
     }
     @PutMapping("/{id}")
